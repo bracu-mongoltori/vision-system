@@ -718,15 +718,15 @@ pathDefaults:
   #all_others:
 paths:
   cam1:
-    runOnInit: ffmpeg -f v4l2 -input_format mjpeg -video_size 1920x1080 -framerate 30 -i /dev/video0 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
-    #runOnInit: ffmpeg -f v4l2 -input_format h264 -video_size 1920x1080 -framerate 30 -i /dev/video0 -f rtsp -codec:v copy rtsp://localhost:$RTSP_PORT/$MTX_PATH
-    runOnInitRestart: yes
+    runOnDemand: ffmpeg -f v4l2 -input_format mjpeg -video_size 1920x1080 -framerate 30 -i /dev/video0 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
+    #runOnDemand: ffmpeg -f v4l2 -input_format h264 -video_size 1920x1080 -framerate 30 -i /dev/video0 -f rtsp -codec:v copy rtsp://localhost:$RTSP_PORT/$MTX_PATH
+    runOnDemandRestart: yes
   cam2:
-    runOnInit: ffmpeg -f v4l2 -input_format mjpeg -video_size 1920x1080 -framerate 30 -i /dev/video2 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
-    runOnInitRestart: yes
+    runOnDemand: ffmpeg -f v4l2 -input_format mjpeg -video_size 1920x1080 -framerate 30 -i /dev/video2 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
+    runOnDemandRestart: yes
   cam3:
-    runOnInit: ffmpeg -f v4l2 -input_format mjpeg -video_size 1920x1080 -framerate 30 -i /dev/video4 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
-    runOnInitRestart: yes
+    runOnDemand: ffmpeg -f v4l2 -input_format mjpeg -video_size 1920x1080 -framerate 30 -i /dev/video4 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
+    runOnDemandRestart: yes
   cam4:
-    runOnInit: ffmpeg -f v4l2 -input_format mjpeg -video_size 1920x1080 -framerate 30 -i /dev/video6 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
-    runOnInitRestart: yes
+    runOnDemand: ffmpeg -f v4l2 -input_format mjpeg -video_size 1920x1080 -framerate 30 -i /dev/video6 -c:v libx264 -pix_fmt yuv420p -preset ultrafast -tune zerolatency -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
+    runOnDemandRestart: yes
